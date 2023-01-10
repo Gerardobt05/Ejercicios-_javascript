@@ -1,0 +1,30 @@
+<html>
+    <head><title>EJercicio 2.2.</title></head>
+    <body>
+        <h1>Ejercicio 2.2.</h1>
+        <script>
+            function calcular(){
+                var edad = document.getElementById("edad").value;
+
+                if(edad < 7 && edad > 6){
+                    console.log("Benjamín");
+                    document.getElementById("edad_id").innerHTML = "Benjamín";
+                }else if(edad < 9 && edad > 8){
+                    console.log("Alevín");
+                    document.getElementById("edad_id").innerHTML = "Alevín";
+
+                }else if(edad < 11 && edad > 10){   
+                    console.log("Infantil");
+                    document.getElementById("edad_id").innerHTML = "Infantil";
+
+                }else{
+                    console.log("Cadete");
+                    document.getElementById("edad_id").innerHTML = "Cadete";
+                }
+                
+            }
+        </script>    
+        <label for="edad">Edad:</label><input type="number" id="edad" onchange="calcular()">
+        <span id="edad_id"></span>
+    </body>
+</html>
