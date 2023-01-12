@@ -1,0 +1,22 @@
+<html>
+    <head><title>Ejercicio 3.1.</title></head>
+    <body>
+        <div id="salida"></div>
+        <script>
+            function calcular(){
+                var num = document.getElementById("numero").value;
+                var res = -1;
+                for(var i=0; i<= 10; i++){
+                    res= num * i; 
+
+                    var txt= num + "x" + i + "=" + res ;
+                    document.getElementById("salida").innerHTML += txt + "<br>";
+                    
+                }
+            }
+        </script>    
+        <label for="numero">Número:</label><input type="number" id="numero" onchange="calcular()">
+        <input type="button" value="Calcular" onclick="calcular()">
+        <span id="tablamult_id"></span>
+    </body>
+</html>
