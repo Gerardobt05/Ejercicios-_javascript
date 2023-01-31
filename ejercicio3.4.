@@ -1,0 +1,39 @@
+<html>
+    <head><title>Ejercicio 3.4.</title></head>
+    <body>
+        <style>
+
+        span{
+            color: green;
+        
+        }
+        </style>
+
+        <script>
+            function calcular(){
+                let numero = parseInt(document.getElementById("número").value);
+                if(primo(numero)){
+                    document.getElementById("salida").innerHTML = "ES PRIMO";
+                }else{
+                    document.getElementById("salida").innerHTML = "NO ES PRIMO";
+
+                }
+            }
+
+            function primo(n){
+                var i = 2;
+
+                for(var i=2; i<n; i++){
+                    if(n % i== 0){
+                        return false;
+                    }
+                }   
+                return true;
+            }
+        </script>    
+        <label for="numero">Número:</label>
+        <input type="number" id="numero">
+        <input type="button" value="¿Es primo?" onclick="calcular()">
+        <span id="salida"></span>
+    </body>
+</html>
